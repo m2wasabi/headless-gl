@@ -3,6 +3,8 @@
 
 It aspires to fully conform to the [WebGL 1.0.3 specification](https://www.khronos.org/registry/webgl/specs/1.0.3/).
 
+[![Build status](https://ci.appveyor.com/api/projects/status/9q3le8cr5xverern?svg=true)](https://ci.appveyor.com/project/Mapbox/headless-gl)
+
 ## Example
 
 ```javascript
