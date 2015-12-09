@@ -5,6 +5,7 @@ It aspires to fully conform to the [WebGL 1.0.3 specification](https://www.khron
 
 [![Build status](https://ci.appveyor.com/api/projects/status/pa5a01cy0m8g1w0a?svg=true)](https://ci.appveyor.com/project/Mapbox/headless-gl)
 
+
 ## Example
 
 ```javascript
