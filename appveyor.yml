@@ -1,7 +1,6 @@
 environment:
   matrix:
-    - nodejs_version: "LTS"
-      platform: x64
+    - platform: x64
       configuration: Release
 
 install:
