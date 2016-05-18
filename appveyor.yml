@@ -1,3 +1,11 @@
+environment:
+  matrix:
+    - nodejs_version: "4.4.4"
+      platform: x64
+      configuration: Release
+      msvs_toolset: 14
+      TOOLSET_ARGS: --dist-url=https://s3.amazonaws.com/mapbox/node-cpp11 --toolset=v140
+
 install:
   - cmd: git submodule update --init
   - ps: Update-NodeJsInstallation (Get-NodeJsLatestBuild $env:nodejs_version)
@@ -6,15 +14,8 @@ install:
   - npm install -g node-gyp
 
 build_script:
-  - npm install --build-from-source %TOOLSET_ARGS%
+  - npm install --loglevel verbose
 
 test_script:
-  - npm test
+  - npm test --loglevel verbose
 
-environment:
-  matrix:
-    - nodejs_version: "4.4.4"
-      platform: x64
-      configuration: Release
-      msvs_toolset: 14
-      TOOLSET_ARGS: --dist-url=https://s3.amazonaws.com/mapbox/node-cpp11 --toolset=v140
