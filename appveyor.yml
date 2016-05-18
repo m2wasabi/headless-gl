@@ -18,3 +18,6 @@ environment:
       configuration: Release
       msvs_toolset: 14
       TOOLSET_ARGS: --dist-url=https://s3.amazonaws.com/mapbox/node-cpp11 --toolset=v140
+
+artifacts:
+  - path: test.zip
