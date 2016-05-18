@@ -4,7 +4,7 @@ install:
   - npm config set msvs_version 2015 --global
   - npm config set target_arch x64 --global
   - npm install -g node-gyp
-  - npm install --release
+  - npm install
 
 test_script:
   - npm test
@@ -12,3 +12,6 @@ test_script:
 environment:
   matrix:
     - nodejs_version: "4.4.4"
+
+configuration:
+  - Release
