@@ -15,3 +15,5 @@ environment:
 
 configuration:
   - Release
+platform:
+  - x64
