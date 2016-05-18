@@ -4,7 +4,9 @@ install:
   - npm config set msvs_version 2015 --global
   - npm config set target_arch x64 --global
   - npm install -g node-gyp
-  - npm install
+
+build_script:
+  - npm install --build-from-source %TOOLSET_ARGS%
 
 test_script:
   - npm test
@@ -12,8 +14,7 @@ test_script:
 environment:
   matrix:
     - nodejs_version: "4.4.4"
-
-configuration:
-  - Release
-platform:
-  - x64
+      platform: x64
+      configuration: Release
+      msvs_toolset: 14
+      TOOLSET_ARGS: --dist-url=https://s3.amazonaws.com/mapbox/node-cpp11 --toolset=v140
